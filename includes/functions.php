@@ -2,8 +2,8 @@
 /**
  * functions.php
  * ---------------------------------------------------------
- * Small helpers used by index.php: safe output escaping,
- * inline SVG icons, and the contact-form handler.
+ * Small helpers used by index.php: safe output escaping
+ * and inline SVG icons.
  * ---------------------------------------------------------
  */
 
@@ -36,72 +36,4 @@ function icon(string $name): string
     ];
 
     return $icons[$name] ?? '';
-}
-
-/**
- * Validates and stores a contact-form submission.
- *
- * Returns an array like ['ok' => bool, 'message' => string, 'errors' => array]
- * so index.php can render feedback without redirecting.
- */
-function handleContactForm(array $post): array
-{
-    $name    = trim($post['name'] ?? '');
-    $email   = trim($post['email'] ?? '');
-    $message = trim($post['message'] ?? '');
-
-    $errors = [];
-
-    if ($name === '') {
-        $errors['name'] = 'Please enter your name.';
-    }
-
-    if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = 'Please enter a valid email address.';
-    }
-
-    if ($message === '') {
-        $errors['message'] = 'Please write a short message.';
-    } elseif (mb_strlen($message) > 2000) {
-        $errors['message'] = 'Message is too long (max 2000 characters).';
-    }
-
-    if (!empty($errors)) {
-        return ['ok' => false, 'message' => 'Please fix the errors below.', 'errors' => $errors];
-    }
-
-    $entry = [
-        'name'    => $name,
-        'email'   => $email,
-        'message' => $message,
-        'sentAt'  => date('Y-m-d H:i:s'),
-    ];
-
-    $dataDir  = __DIR__ . '/../data';
-    $dataFile = $dataDir . '/messages.json';
-
-    if (!is_dir($dataDir)) {
-        mkdir($dataDir, 0775, true);
-    }
-
-    $existing = [];
-    if (is_file($dataFile)) {
-        $decoded = json_decode((string) file_get_contents($dataFile), true);
-        if (is_array($decoded)) {
-            $existing = $decoded;
-        }
-    }
-
-    $existing[] = $entry;
-
-    $saved = @file_put_contents(
-        $dataFile,
-        json_encode($existing, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
-    );
-
-    if ($saved === false) {
-        return ['ok' => false, 'message' => 'Something went wrong saving your message. Please try again.', 'errors' => []];
-    }
-
-    return ['ok' => true, 'message' => "Thanks, {$name} — your message has been received!", 'errors' => []];
 }

@@ -4,12 +4,6 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/data.php';
 require_once __DIR__ . '/includes/functions.php';
 
-$formResult = null;
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
-    $formResult = handleContactForm($_POST);
-}
-
 $year = date('Y');
 ?>
 <!DOCTYPE html>
@@ -201,14 +195,22 @@ $year = date('Y');
     <p class="section__eyebrow">Contact</p>
     <h2 class="section__title">Let's work together</h2>
 
-    <div class="contact">
+    <div class="contact contact--centered">
       <div class="contact__info">
-        <p>Have a project in mind, or just want to say hi? Send a message and I'll get back to you.</p>
+        <p>Have a project in mind, or just want to say hi? Reach out directly — I'll get back to you.</p>
         <ul class="about__facts">
           <li><span>Email</span><strong><a href="mailto:<?= e($profile['email']) ?>"><?= e($profile['email']) ?></a></strong></li>
           <li><span>Phone</span><strong><a href="tel:<?= e(str_replace(' ', '', $profile['phone'])) ?>"><?= e($profile['phone']) ?></a></strong></li>
           <li><span>Location</span><strong><?= e($profile['location']) ?></strong></li>
         </ul>
+        <div class="contact__actions">
+          <a href="mailto:<?= e($profile['email']) ?>" class="btn btn--primary">
+            <?= icon('mail') ?> Email Me
+          </a>
+          <a href="tel:<?= e(str_replace(' ', '', $profile['phone'])) ?>" class="btn btn--ghost">
+            <?= icon('phone') ?> Call Me
+          </a>
+        </div>
         <div class="hero__socials">
           <?php foreach ($socials as $social): ?>
             <a href="<?= e($social['url']) ?>" class="social-icon" target="_blank" rel="noopener" title="<?= e($social['label']) ?>">
@@ -217,34 +219,6 @@ $year = date('Y');
           <?php endforeach; ?>
         </div>
       </div>
-
-      <form class="contact__form" method="post" action="#contact" novalidate>
-        <?php if ($formResult): ?>
-          <div class="alert <?= $formResult['ok'] ? 'alert--success' : 'alert--error' ?>">
-            <?= e($formResult['message']) ?>
-          </div>
-        <?php endif; ?>
-
-        <label>
-          Name
-          <input type="text" name="name" value="<?= e($_POST['name'] ?? '') ?>">
-          <?php if (!empty($formResult['errors']['name'])): ?><small><?= e($formResult['errors']['name']) ?></small><?php endif; ?>
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" value="<?= e($_POST['email'] ?? '') ?>">
-          <?php if (!empty($formResult['errors']['email'])): ?><small><?= e($formResult['errors']['email']) ?></small><?php endif; ?>
-        </label>
-
-        <label>
-          Message
-          <textarea name="message" rows="5"><?= e($_POST['message'] ?? '') ?></textarea>
-          <?php if (!empty($formResult['errors']['message'])): ?><small><?= e($formResult['errors']['message']) ?></small><?php endif; ?>
-        </label>
-
-        <button type="submit" name="contact_submit" value="1" class="btn btn--primary">Send message</button>
-      </form>
     </div>
   </section>
 
