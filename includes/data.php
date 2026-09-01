@@ -145,6 +145,17 @@ $projects = [
         'placeholder' => false,
     ],
     [
+        'title'       => 'Yeneh Interiors',
+        'description' => 'A responsive PHP website for a freelance interior designer in Dubai — '
+                        . 'built with a custom PHP templating structure, a working contact form, '
+                        . 'portfolio filtering, and a light/dark single-page version with scroll-reveal animations.',
+        'tags'        => ['PHP', 'Web Design', 'Responsive'],
+        'link'        => 'https://claude.ai/code/artifact/230b43d8-0e11-4a09-a515-77fcd39c41a5',
+        'repo'        => '#',
+        'featured'    => false,
+        'placeholder' => false,
+    ],
+    [
         'title'       => 'More projects coming soon',
         'description' => "This slot is ready for your next project — add it to includes/data.php with a title, description, tags, and link once it's ready to share.",
         'tags'        => [],
