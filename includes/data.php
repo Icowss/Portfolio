@@ -157,7 +157,7 @@ $projects = [
     ],
     [
         'title'       => 'More projects coming soon',
-        'description' => "This slot is ready for your next project — add it to includes/data.php with a title, description, tags, and link once it's ready to share.",
+        'description' => "More projects are on the way — check back soon, or get in touch if you'd like to see additional work.",
         'tags'        => [],
         'link'        => '#',
         'repo'        => '#',
