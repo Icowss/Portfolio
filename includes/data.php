@@ -156,6 +156,19 @@ $projects = [
         'placeholder' => false,
     ],
     [
+        'title'       => 'Imajica Camera Rental',
+        'description' => 'A full-stack camera/equipment rental platform for a real Philippine '
+                        . 'rental business — PHP 8 + MySQL/SQLite backend with a React 18 + '
+                        . 'Framer Motion frontend, a complete booking system with real-time '
+                        . 'availability checks and tiered daily pricing, and a separate admin '
+                        . 'panel with live dashboard analytics.',
+        'tags'        => ['PHP', 'React', 'MySQL', 'Booking System'],
+        'link'        => '#',
+        'repo'        => 'https://github.com/Icowss/Imajica',
+        'featured'    => false,
+        'placeholder' => false,
+    ],
+    [
         'title'       => 'More projects coming soon',
         'description' => "More projects are on the way — check back soon, or get in touch if you'd like to see additional work.",
         'tags'        => [],
