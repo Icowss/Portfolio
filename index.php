@@ -155,7 +155,9 @@ $year = date('Y');
               <?php endforeach; ?>
             </div>
             <div class="card__links">
-              <a href="<?= e($project['link']) ?>"><?= icon('external') ?> Live demo</a>
+              <?php if (!empty($project['link']) && $project['link'] !== '#'): ?>
+                <a href="<?= e($project['link']) ?>"><?= icon('external') ?> Live demo</a>
+              <?php endif; ?>
               <?php if (!empty($project['repo']) && $project['repo'] !== '#'): ?>
                 <a href="<?= e($project['repo']) ?>"><?= icon('code') ?> Source</a>
               <?php endif; ?>
