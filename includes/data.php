@@ -41,7 +41,7 @@ $skills = [
     ['name' => 'PC Hardware & Software Install/Upgrades',     'level' => 80],
     ['name' => 'Microsoft Office Suite',                      'level' => 85],
     ['name' => 'Drafting & AutoCAD',                          'level' => 75],
-    ['name' => 'Programming (JavaScript, Python, PHP, Laravel)', 'level' => 70],
+    ['name' => 'Programming (JavaScript, React, Python, PHP, Laravel)', 'level' => 70],
     ['name' => 'Basic Exchange Server & Email Config',        'level' => 60],
 ];
 
@@ -61,26 +61,26 @@ $experience = [
         ],
     ],
     [
-        'role'    => 'Encoder / Helper',
-        'company' => 'Uratex',
-        'place'   => 'Plaridel, Bulacan, Philippines',
-        'period'  => 'Sep 2024 – Mar 2025',
-        'bullets' => [
-            'Assisted in the production area by cutting foam and arranging orders for smooth, timely deliveries.',
-            'Performed data encoding tasks during night shifts with 99% accuracy to support administrative reporting.',
-            'Set up and troubleshot IT equipment to maintain operational efficiency.',
-        ],
-    ],
-    [
         'role'    => 'IT Coordinator',
         'company' => 'Three Star Learning Center School of Rocka',
         'place'   => 'Plaridel, Bulacan, Philippines',
-        'period'  => 'Oct 2022 – Jun 2024',
+        'period'  => 'Sep 2024 – Jun 2025',
         'bullets' => [
             'Delivered day-to-day IT support, resolving 95% of technical issues on first contact to reduce downtime.',
             'Managed and updated academic databases, improving data accuracy and streamlining school operations.',
             'Maintained and upgraded IT equipment, extending device lifespan by 20% and lowering repair costs.',
             'Assisted with digital communications and online content, boosting student and parent engagement.',
+        ],
+    ],
+    [
+        'role'    => 'IT Administrator',
+        'company' => 'Uratex',
+        'place'   => 'Plaridel, Bulacan, Philippines',
+        'period'  => 'Oct 2022 – Aug 2024',
+        'bullets' => [
+            'Administered day-to-day IT operations for the production facility, including user accounts, workstation setup, and network connectivity.',
+            'Maintained and troubleshot IT equipment and systems, keeping downtime low during production and administrative shifts.',
+            'Managed data encoding and reporting systems during night shifts with 99% accuracy to support administrative operations.',
         ],
     ],
     [
@@ -92,17 +92,6 @@ $experience = [
             'Installed, configured, and repaired computer hardware/software for 100+ successful system setups and fixes.',
             'Performed preventive maintenance on PCs and peripherals, reducing recurring client issues.',
             'Delivered personalized troubleshooting support, achieving a 95% client satisfaction rate.',
-        ],
-    ],
-    [
-        'role'    => 'Service Crew',
-        'company' => 'Jollibee',
-        'place'   => 'Plaridel, Bulacan, Philippines',
-        'period'  => 'May 2019 – Feb 2022',
-        'bullets' => [
-            'Provided excellent customer service that contributed to consistent positive feedback.',
-            'Supported the team during peak hours, helping achieve daily sales targets.',
-            'Trained and guided new staff on food safety and service procedures, improving team efficiency.',
         ],
     ],
 ];

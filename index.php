@@ -13,6 +13,9 @@ $year = date('Y');
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= e($profile['name']) ?> — <?= e($profile['title']) ?></title>
 <meta name="description" content="<?= e($profile['tagline']) ?>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -72,7 +75,7 @@ $year = date('Y');
   </section>
 
   <!-- About -->
-  <section id="about" class="section">
+  <section id="about" class="section reveal">
     <p class="section__eyebrow">About</p>
     <h2 class="section__title">A little about me</h2>
     <div class="about__grid">
@@ -87,7 +90,7 @@ $year = date('Y');
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section section--muted">
+  <section id="skills" class="section section--muted reveal">
     <p class="section__eyebrow">Skills</p>
     <h2 class="section__title">What I work with</h2>
     <div class="skills">
@@ -106,7 +109,7 @@ $year = date('Y');
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="section section--muted">
+  <section id="experience" class="section section--muted reveal">
     <p class="section__eyebrow">Experience</p>
     <h2 class="section__title">Where I've worked</h2>
     <div class="timeline">
@@ -133,7 +136,7 @@ $year = date('Y');
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section">
+  <section id="projects" class="section reveal">
     <p class="section__eyebrow">Projects</p>
     <h2 class="section__title">Sample work</h2>
     <div class="projects">
@@ -169,7 +172,7 @@ $year = date('Y');
   </section>
 
   <!-- Education & Certifications -->
-  <section id="education" class="section section--muted">
+  <section id="education" class="section section--muted reveal">
     <p class="section__eyebrow">Background</p>
     <h2 class="section__title">Education &amp; Certifications</h2>
     <div class="edu-grid">
@@ -195,7 +198,7 @@ $year = date('Y');
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section section--muted">
+  <section id="contact" class="section section--muted reveal">
     <p class="section__eyebrow">Contact</p>
     <h2 class="section__title">Let's work together</h2>
 
