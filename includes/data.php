@@ -14,14 +14,14 @@ $profile = [
     'tagline'   => 'Hands-on IT support and troubleshooting, paired with programming skills — I keep systems running and build the tools that run them.',
     'about'     => "I'm an adaptable IT professional with hands-on experience in technical "
                  . "support, system maintenance, and customer service. I'm skilled in "
-                 . "troubleshooting, hardware/software installation, and data management, "
-                 . "with a track record of improving operational efficiency and user "
-                 . "satisfaction. Alongside support work, I also build small web systems — "
-                 . "like the School Management System below — to solve real, everyday "
-                 . "problems for the teams I work with.",
+                 . "troubleshooting, hardware/software installation, data management, and "
+                 . "basic networking, with a track record of improving operational "
+                 . "efficiency and user satisfaction. Alongside support work, I also build "
+                 . "small web systems — like the School Management System below — to solve "
+                 . "real, everyday problems for the teams I work with.",
     'location'  => 'Satwa, Dubai, UAE',
     'email'     => 'm.avnd05@gmail.com',
-    'phone'     => '+971 50 274 2998',
+    'phone'     => '+971 50 970 6167',
     'resume'    => 'assets/files/Michael_John_Avenido_Resume.pdf',
     'avatarInitials' => 'MA',
     // Set to '' to fall back to the initials circle instead of a photo.
@@ -31,7 +31,7 @@ $profile = [
 $socials = [
     ['label' => 'GitHub',   'url' => 'https://github.com/Icowss', 'icon' => 'github'],
     ['label' => 'LinkedIn', 'url' => 'https://www.linkedin.com/in/michael-john-avenido-114797328/', 'icon' => 'linkedin'],
-    ['label' => 'Phone',    'url' => 'tel:+971502742998', 'icon' => 'phone'],
+    ['label' => 'Phone',    'url' => 'tel:+971509706167', 'icon' => 'phone'],
     ['label' => 'Email',    'url' => 'mailto:m.avnd05@gmail.com', 'icon' => 'mail'],
 ];
 
@@ -43,6 +43,7 @@ $skills = [
     ['name' => 'Drafting & AutoCAD',                          'level' => 75],
     ['name' => 'Programming (JavaScript, React, Python, PHP, Laravel)', 'level' => 70],
     ['name' => 'Basic Exchange Server & Email Config',        'level' => 60],
+    ['name' => 'Basic Networking',                            'level' => 65],
 ];
 
 /**
